@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %} 
+
+    <h1>Madlibs</h1>
+    <form action="/madlibs">
+        {% for prompt in prompts %}
+        <p>{{ prompt }}:
+            <input name="{{ prompt }}" placeholder="{{ prompt }}">
+        </p>
+        {% endfor %}
+        <button>Submit</button>
+    </form>
+    <!-- <form action="/madlibs">
+        <input type="text" placeholder="place" name="place"><br><br>
+        <input type="text" placeholder="noun" name="noun"><br><br>
+        <input type="text" placeholder="verb" name="verb">   <br><br>
+        <input type="text" placeholder="adjective" name="adjective">  <br><br>
+        <input type="text" placeholder="plural noun" name="plural_noun">  <br><br>
+        <button>Submit!</button>
+    </form> -->
+    
+{% endblock %}

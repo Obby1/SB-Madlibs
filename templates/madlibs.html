@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Madlib {% endblock %}
+
+{% block content %} 
+
+<h1>Mad Story</h1>
+
+<p>
+    {{ text }}
+
+    {% print(request.args) %}
+    <!-- everything submitted in the form became a dict like object that can be accessed with request.args -->
+
+</p>
+
+{% endblock %}
